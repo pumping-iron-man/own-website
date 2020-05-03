@@ -1,6 +1,5 @@
 language: node_js
-node_js:
-  - "stable"
+node_js: stable
 cache:
   directories: 
     - node_modules
@@ -9,5 +8,6 @@ deploy:
   cleanup: true
   github_token: $github_token
   local_dir: build
+  target_branch: master
   on:
-    branch: master
+    branch: staging
