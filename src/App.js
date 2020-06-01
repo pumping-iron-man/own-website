@@ -15,7 +15,7 @@ function App() {
           <p>contact</p>
         </a>
       </button>
-      <p id="responsive-info">currently not designed with responsiveness.  give it a try, but don't get upset.</p>
+      <p id="responsive-info">currently not responsive.  give it a try, but don't get upset.</p>
       <div id="personal-info">
         <p className="big-font-size">hi, my name is zeeshan.</p>
         <p className="big-font-size">i'm moving towards the <br/>trinity status:</p>
