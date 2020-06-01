@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-import profile from './img/gitprofile.png'
+import profile from './img/Zeichenfläche 1.png'
 import githubicon from './img/github.png'
 import instaicon from './img/instagram.png'
 import xingicon from './img/xing.png'
