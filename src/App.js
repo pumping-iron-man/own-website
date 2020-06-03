@@ -2,9 +2,9 @@ import React from 'react';
 import './App.css';
 
 import profile from './img/Zeichenfläche 1.png'
-import githubicon from './img/github.png'
-import instaicon from './img/instagram.png'
-import xingicon from './img/xing.png'
+import githubicon from './img/github_logo.png'
+import instaicon from './img/instagram_logo.png'
+import xingicon from './img/xing_logo.png'
 
 function App() {
   return (
@@ -12,13 +12,13 @@ function App() {
       <button id="contact">
         <a href="mailto:zahmad94@gmail.com">
           <img src={profile} alt="profil"/>
-          <p>contact</p>
+          <p>get in touch</p>
         </a>
       </button>
-      <p id="responsive-info">currently not responsive.  give it a try, but don't get upset.</p>
       <div id="personal-info">
-        <p className="big-font-size">hi, my name is zeeshan.</p>
-        <p className="big-font-size">i'm moving towards the <br/>trinity status:</p>
+        <p>hi,</p>
+        <p>my name is zeeshan.</p>
+        <p>i'm moving towards the trinity status:</p>
         <div id="skills">
           <p>experience</p>
           <p>design</p>
@@ -42,7 +42,6 @@ function App() {
           </a>
         </button>
       </div>
-      {/* <p id="creation-info">created with <i>react</i></p> */}
     </div>
   );
 }

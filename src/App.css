@@ -1,3 +1,11 @@
+button {
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
 .App {
   height: 100vh;
   display: grid;
@@ -7,17 +15,10 @@
   letter-spacing: 1px;
 }
 
-button {
-  cursor: pointer;
-}
-
-button:focus {
-  outline: none;
-}
-
 .App > * {
   grid-column: 2 / 3;
 }
+
 #contact {
   background-color: #fff;
   box-shadow: 0px 0px 17px -7px rgba(0,0,0,0.75);
@@ -27,7 +28,6 @@ button:focus {
   margin: 15px 0 0 0;
   text-align: center;
   text-decoration: none;
-  font-size: 16px;
   align-self: flex-start;
   justify-self: flex-end;
   font-weight: 600;
@@ -52,6 +52,7 @@ button:focus {
   background-color: #f0f0f0;
   background-size: 100%;
   transition: background 0s;
+  animation-duration: 0s;
 }
 
 #contact img {
@@ -60,24 +61,18 @@ button:focus {
   margin-right: 5px;
 }
 
-#responsive-info {
-  background-image: linear-gradient(to right, #FFDC87, #FFB758);
-  padding: 10px 15px;
-  align-self: flex-end;
-  justify-self: center;
-  border-radius: 5px;
-}
 #personal-info {
-  grid-row: 3 / 10;
+  grid-row: 2 / 10;
   align-self: center;
 }
 
-.big-font-size {
-  font-size: 4em;
+#personal-info > p {
+  font-size: 3.5em;
 }
 
 #skills {
   display: flex;
+  flex-wrap: wrap;
 }
 
 #skills p {
@@ -86,6 +81,7 @@ button:focus {
   padding: 10px 20px;
   margin: 20px 20px 0 0;
   border-radius: 5px;
+  display: flex;
 }
 
 #skills p:nth-child(1) {
@@ -101,22 +97,70 @@ button:focus {
 }
 
 #icons {
-  align-self: flex-end;
   justify-self: center;
-  margin-bottom: 15px;
   display: flex;
 }
 #icons button {
   background-color: transparent;
-  margin-right: 20px;
+  margin: 10px;
 }
 #icons button img {
   transition: opacity 0.5s;
   border-radius: 50%;
-  height: 25px;
+  height: 35px;
   opacity: .5;
 }
 
 #icons button img:hover {
   opacity: 1;
+}
+
+@media only screen and (max-width: 670px) {
+  html, body, #root {
+    background-image: linear-gradient(to bottom right, #fff, #f0f0f0);
+    height: 100%;
+  }
+
+  .App {
+    height: 100%;
+    font-weight: 600;
+  }
+
+  #personal-info > p:nth-child(3) {
+    margin-bottom: 10px;
+  }
+
+  #personal-info > p {
+    font-size: 2.5em;
+  }
+
+  #icons {
+    grid-row-end: -1;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 0;
+  }
+
+  #skills p {
+    font-size: 1.5em;
+    margin-bottom: 0;
+    margin-right: 10px;
+  }
+
+  #icons button img {
+    height: 35px;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  #personal-info > p {
+    font-size: 2em;
+  }
+
+  #skills p {
+    font-size: 1.2em;
+    margin: 10px 10px 0 0;
+  }
+
 }
